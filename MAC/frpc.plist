@@ -1,0 +1,25 @@
+# 在MAC中添加plist文件到/Library/LauchAgent/frpc.plist
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN
+http://www.apple.com/DTDs/PropertyList-1.0.dtd >
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>frpc</string>
+    <key>ProgramArguments</key>
+    <array>
+         <string>/Users/jswh/Documents/cba/frp/frpc</string>
+         <string>-c</string>
+         <string>/Users/jswh/Documents/cba/frp/frpc.ini</string>
+    </array>
+    <key>KeepAlive</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/frp.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/frp.err</string>
+</dict>
+</plist>
